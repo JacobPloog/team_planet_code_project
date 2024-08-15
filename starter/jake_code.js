@@ -64,3 +64,5 @@ function showUserFactors(type, value) {
     }
     console.log("")
 }
+
+global.showUserFactors = showUserFactors;
