@@ -1,6 +1,6 @@
 const prompt = require('prompt-sync')();
 // require gravityFactors from "./gravityFactors.js"
-const gravityFactors = require('./gravityFactors.js');
+const gravityFactors = require('./earthGravityFactors.js');
 // create a function called calculateWeightOnPlanets
 
 // pass an argument of earthWeight

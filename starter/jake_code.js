@@ -62,7 +62,7 @@ function showUserFactors(type, value) {
         default:
             measurement = "units"
     }
-    console.log();
+    console.log(type);
 }
 
 global.showUserFactors = showUserFactors;
