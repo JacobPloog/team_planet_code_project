@@ -67,7 +67,7 @@ function showUserFactors(type, value) {
     }
 }
 function getUserInput() {
-    console.log("What type of measurement would you like to use?");
+    console.log("What type of measurement would you like to use? (weight or jump)");
     let type = prompt(">> ");
     console.log(`What is your ${type} on earth?`);
     let value = prompt(">> ");
@@ -75,3 +75,4 @@ function getUserInput() {
 }
 
 global.showUserFactors = showUserFactors;
+global.getUserInput = getUserInput;
