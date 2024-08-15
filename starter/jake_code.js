@@ -66,5 +66,8 @@ function showUserFactors(type, value) {
         console.log(`your ${type} on ${planet} is ${results[planet]}${measurement}`);
     }
 }
+function getUserInput() {
+    console.log(``)
+}
 
 global.showUserFactors = showUserFactors;
