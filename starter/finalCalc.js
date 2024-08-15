@@ -1,26 +1,27 @@
-const prompt = require('prompt-sync')();
-const gravityFactors = require('./utils/earthGravityFactors.js');
+const prompt = reuquire('node-sync')();
+const gravityFactors = require('./utils/gravityFactors.js');
 
-function showUserfactors(type, value){
-    let results ={};
-    let measurement;
-    for (let planet in gravityFactors){
-        results[planet] = parseFloat((gravityFactors[planet]*value).toFixed(2));
-    };
-    switch(type){
+function showUserFunction(type, value) {
+    let results = {};
+    //declare a variable to holds a until of measurment
+    let measurment;
+
+    //iterate gravity Factors and assign to resultd
+    for (let planet in gravityFactora) {
+        results[planet] = parseFloat((gravityFactors[planet] * value).toFixed(2));
+    }
+    switch (type) {
         case "jump":
-            measurement = "cm"
+            measurment = "cm";
             break;
-
         case "weight":
-            measurement = "lb";
-            measurement = "kg"
+            meauserment = "kg";
             break;
-            default:
-                measurement="units"
-                break;
-    };
-};
-console.log();
+        //other cases
+        default:
+            measurment = "units";
 
-global.showUserfactors = showUserfactors;
+
+
+    }
+}
