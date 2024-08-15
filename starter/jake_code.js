@@ -62,7 +62,7 @@ function showUserFactors(type, value) {
         default:
             measurement = "units"
     }
-    console.log("your jump on planet is " + value(measurement))
+    console.log();
 }
 
 global.showUserFactors = showUserFactors;
