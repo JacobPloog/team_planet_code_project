@@ -71,7 +71,7 @@ function getUserInput() {
     let type = prompt(">> ");
     console.log(`What is your ${type} on earth?`);
     let value = prompt(">> ");
-    showUserFactors(type, value)
+    console.log(showUserFactors(type, value));
 }
 
 global.showUserFactors = showUserFactors;
