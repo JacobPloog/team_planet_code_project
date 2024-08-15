@@ -62,7 +62,9 @@ function showUserFactors(type, value) {
         default:
             measurement = "units"
     }
-    console.log(type);
+    for (let planet in results) {
+        console.log(`your ${type} on ${planet} is ${results[planet]}${measurement}`);
+    }
 }
 
 global.showUserFactors = showUserFactors;
