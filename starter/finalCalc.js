@@ -24,4 +24,9 @@ function showUserFunction(type, value) {
 
 
     }
+    for (let planet in results){
+
+    
+    console.log(`Your ${type} on ${planet} is ${result[planet]} ${measurement} `)
+};
 }
