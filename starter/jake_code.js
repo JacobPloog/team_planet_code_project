@@ -61,6 +61,6 @@ function showUserFactors(type, value) {
             break;
         default:
             measurement = "units"
-
     }
+    console.log("")
 }
