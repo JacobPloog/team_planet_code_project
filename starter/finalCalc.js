@@ -1,6 +1,6 @@
 const prompt = reuquire('node-sync')();
 const gravityFactors = require('./utils/gravityFactors.js');
-
+const alienGravityFactors = require('./utils/gravityFactors.js')
 function showUserFunction(type, value) {
     let results = {};
     //declare a variable to holds a until of measurment
