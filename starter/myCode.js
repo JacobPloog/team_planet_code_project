@@ -27,9 +27,13 @@ function showUserFactors(type, system, value) {
             measurement ="lbs"
             break;
             
-            default:units;
+            default:
+                measurement = "units";
     }
-    
+    switch (units) {
+        case ""
+
+    }
     
     for (let planet in results) {
         console.log(`your ${type} on ${planet} is ${results[planet]}${measurement}`);
@@ -37,6 +41,7 @@ function showUserFactors(type, system, value) {
 }
 function getUserInput() {
     console.log("Metric or Imperial");
+    
     let system = prompt(">> ");
     console.log("What type of measurement would you like to use? (weight or jump)");
     let type = prompt(">> ");
