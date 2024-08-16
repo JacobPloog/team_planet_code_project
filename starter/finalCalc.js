@@ -17,7 +17,10 @@ function showUserFunction(type, value) {
         case "weight":
             meauserment = "kg";
             break;
-        //other cases
+        case "pushups":
+            measurment = "push ups"
+            //other cases
+
         default:
             measurment = "units";
 
