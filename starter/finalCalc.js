@@ -1,6 +1,6 @@
 const prompt = reuquire('node-sync')();
 const gravityFactors = require('./utils/gravityFactors.js');
-
+const alienGravityFactors = require('./utils/gravityFactors.js')
 function showUserFunction(type, value) {
     let results = {};
     //declare a variable to holds a until of measurment
@@ -17,7 +17,10 @@ function showUserFunction(type, value) {
         case "weight":
             meauserment = "kg";
             break;
-        //other cases
+        case "pushups":
+            measurment = "push ups"
+            //other cases
+
         default:
             measurment = "units";
 
