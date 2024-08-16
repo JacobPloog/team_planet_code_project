@@ -1,6 +1,6 @@
 const prompt = require('prompt-sync')();
 // require gravityFactors from "./gravityFactors.js"
-const gravityFactors = require('./gravityFactors.js');
+const gravityFactors = require('./utils/earthGravityFactors.js');
 // create a function called calculateWeightOnPlanets
 
 // pass an argument of earthWeight
@@ -32,9 +32,13 @@ function getUserWeight() {
     console.log("Your weight is:", userWeight);
     // create a method to take the user weight
     // and log the weight on other planets
-    console.log("Your weight on other planets is:");
+   
     calculateWeight(userWeight);
 }
+
+
+
+
 global.getUserWeight = getUserWeight;
 // console.log("Your weight on other planets is:");
 // console.log(calculateWeight(100));

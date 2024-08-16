@@ -32,7 +32,6 @@ function showUserFactors(type, value) {
 
 function userWorldInput() {
     console.log('Enter the world you want "earth " or "alien" ')
-      const
      
 }
 
