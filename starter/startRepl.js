@@ -11,8 +11,8 @@ const repl = require('repl');
 const fs = require('fs');
 const path = require('path');
 
-const scripts = ['./index.js', "./jake_code.js", "./finalcalc.js", "./mirella_code.js"];
 
+const scripts = ['./index.js', "./jake_code.js", "./finalcalc.js", "./mirella_code.js", "./finalcalc-mirella.js"];
 const loadFunctions = () => {
     scripts.forEach(script => {
         try {

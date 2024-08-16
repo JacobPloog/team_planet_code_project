@@ -3,11 +3,10 @@ const gravityFactors = require('./utils/earthGravityFactors.js');
 const alienGravityFactors = require('./utils/alienGravityFactors.js');
 const validWords = ["metric", "imperial", "bob", "kevin"];
 
-function showUserFactors(type, units, value, planets) {
+function showUserFactors(type, units, value) {
     let results = {};
     let measurement;
     let system;
-    let planets;
     for (let planet in gravityFactors) {
         results[planet] = parseFloat((gravityFactors[planet] * value).toFixed(2));
     }
@@ -24,12 +23,10 @@ function showUserFactors(type, units, value, planets) {
     }
     switch (type) {
         case "jump":
-            if (system = "metric") { measurement = "cm" }
-            if (system = "imperial") {measurement = "in"}
+            if (system = "metric") { measurement = "cm" } else { measurement = "in" }
             break;
         case "weight":
-            if (system = "metric") { measurement = "kg" }
-            if (system = "imperial") { measurement = "lb" }
+            if (system = "metric") { measurement = "kg" } else { measurement = "lb" }
             break;
         case "pushups":
             measurement = " pushups"
@@ -43,19 +40,13 @@ function showUserFactors(type, units, value, planets) {
     }
 }
 function getUserInput() {
-    while (true) {
-        console.log("Metric or Imperial measurement?");
-        let system = prompt(">> ").trim().toLowerCase();
-        console.log("What type of measurement would you like to use? (weight, jump, or pushups)");
-        let type = prompt(">> ").trim().toLowerCase();
-        console.log(`What is your ${type} on earth?`);
-        let value = prompt(">> ").trim().toLowerCase();
-        console.log(showUserFactors(type, value));
-        let isMatch = false;
-        for (let i = 0; i < validWords.length - 1; i++) {
-            if 
-        }
-    }
+    console.log("Metric or Imperial measurement?");
+    let units = prompt(">> ").trim().toLowerCase();
+    console.log("What type of measurement would you like to use? (weight, jump, or pushups)");
+    let type = prompt(">> ").trim().toLowerCase();
+    console.log(`What is your ${type} on earth?`);
+    let value = prompt(">> ").trim().toLowerCase();
+    console.log(showUserFactors(type, units, value));
 }
 
 
