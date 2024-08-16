@@ -45,12 +45,16 @@
 
 const prompt = require('prompt-sync')();
 const gravityFactors = require('./utils/earthGravityFactors.js');
+const alienGravityFactors = require('./utils/alienGravityFactors.js');
 
 function showUserFactors(type, value) {
     let results = {};
     let measurement;
     for (let planet in gravityFactors) {
         results[planet] = parseFloat((gravityFactors[planet] * value).toFixed(2));
+    }
+    for (let planet in alienGravityFactors) {
+        results[planet] = parseFloat((alienGravityFactors[planet] * value).toFixed(2));
     }
     switch (type) {
         case "jump":
