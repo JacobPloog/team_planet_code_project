@@ -45,12 +45,16 @@
 
 const prompt = require('prompt-sync')();
 const gravityFactors = require('./utils/earthGravityFactors.js');
+const alienGravityFactors = require('./utils/alienGravityFactors.js');
 
 function showUserFactors(type, value) {
     let results = {};
     let measurement;
     for (let planet in gravityFactors) {
         results[planet] = parseFloat((gravityFactors[planet] * value).toFixed(2));
+    }
+    for (let planet in alienGravityFactors) {
+        results[planet] = parseFloat((alienGravityFactors[planet] * value).toFixed(2));
     }
     switch (type) {
         case "jump":
@@ -67,7 +71,7 @@ function showUserFactors(type, value) {
     }
 }
 function getUserInput() {
-    console.log("What type of measurement would you like to use?");
+    console.log("What type of measurement would you like to use? (weight or jump)");
     let type = prompt(">> ");
     console.log(`What is your ${type} on earth?`);
     let value = prompt(">> ");
@@ -75,3 +79,4 @@ function getUserInput() {
 }
 
 global.showUserFactors = showUserFactors;
+global.getUserInput = getUserInput;
