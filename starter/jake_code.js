@@ -1,6 +1,7 @@
 const prompt = require('prompt-sync')();
 const gravityFactors = require('./utils/earthGravityFactors.js');
 const alienGravityFactors = require('./utils/alienGravityFactors.js');
+const validSystems = ["metric", "imperial"];
 
 function showUserFactors(type, value) {
     let results = {};
@@ -29,8 +30,10 @@ function showUserFactors(type, value) {
     }
 }
 function getUserInput() {
-    console.log("What type of measurement would you like to use? (weight or jump)");
+    console.log("What type of measurement would you like to use? (weight, jump, or pushups)");
     let type = prompt(">> ").trim().toLowerCase();
+    console.log("Metric or Imperial measurement");
+    let system = prompt(">> ").trim().toLowerCase();
     console.log(`What is your ${type} on earth?`);
     let value = prompt(">> ").trim().toLowerCase();
     console.log(showUserFactors(type, value));
