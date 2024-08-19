@@ -1,7 +1,8 @@
-const prompt = reuquire('node-sync')();
+const prompt = require('node-sync')();
 const gravityFactors = require('./utils/gravityFactors.js');
 const alienGravityFactors = require('./utils/gravityFactors.js')
-function showUserFunction(type, value) {
+
+function showUserFactors(type, value) {
     let results = {};
     //declare a variable to holds a until of measurment
     let measurment;
@@ -24,12 +25,21 @@ function showUserFunction(type, value) {
         default:
             measurment = "units";
 
-
+            while (true) {
+    
+                let  weight= prompt (">>");
+   
+                break;
 
     }
+
+  
     for (let planet in results){
 
     
     console.log(`Your ${type} on ${planet} is ${result[planet]} ${measurement} `)
 };
+    }
 }
+// global.getUserInput =getUserInput;
+// getUserInput();
