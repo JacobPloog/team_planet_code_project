@@ -2,11 +2,11 @@ const prompt = require('prompt-sync')();
 const gravityFactors = require('./utils/earthGravityFactors.js');
 const alienGravityFactors = require('./utils/alienGravityFactor.js');
 
-function showUserFactors(type, value, system, meausreSystem) {
+function showUserFactors(type, value, planets, unit) {
     let results = {};
     //declare a variable to holds a until of measurment
     let measurment;
-    let system;
+    let unit;
     let value;
     let planets;
 
@@ -17,13 +17,21 @@ function showUserFactors(type, value, system, meausreSystem) {
     for (let planet in alienFactors) {
         results[planet] = parseFloat((alienGravityFactors[planet] * value).toFixed(2));
     }
+    switch (unit) { 
+        case "metric":
+            break;
+        case "imperial":
+            break;
+    }
     switch (type) {
         case "jump":
-            measurment = "cm";
+            if {system }{ measurment = "cm" };
             break;
         case "weight":
             meauserment = "kg";
             break;
+        case "pushups":
+            
         //other cases
         default:
             measurment = "units";
@@ -33,6 +41,7 @@ function showUserFactors(type, value, system, meausreSystem) {
         console.log(`Your ${type} on ${planet} is ${results[planet]} ${measurment}`);
 
     }
+    switch ()
 
 }
 
