@@ -6,16 +6,13 @@ const alienGravityFactors = require('./utils/alienGravityFactors.js');
 
 function showUserFactors(factorType, factorPlanets, factorSystem, factorValue) {
     let results = {};
-    let system;
-    let measurement;
-    for (let planet in earthGravityFactors) {
-        results[planet] = parseFloat((earthGravityFactors[planet] * factorValue).toFixed(2));
-    }
-    for (let planet in alienGravityFactors) {
-        results[planet] = parseFloat((alienGravityFactors[planet] * factorValue).toFixed(2));
-    }
     for (let planet in results) {
         console.log(`your ${factorType} on ${planet} is ${results[planet]}${measurement}`);
+    }
+    console.log("Measure again? (y or n)");
+    let input = prompt(">>").trim().toLowerCase();
+    if (input === 'y') {
+        getUserInput();
     }
 }
 
@@ -73,6 +70,15 @@ function getUserInput() {
     while (true) {
         console.log(`What solar system would you like to use? (earth or alien)`);
         factorPlanets = prompt(">> ").trim().toLowerCase();
+        if (factorPlanets === "earth") {
+            for (let planet in earthGravityFactors) {
+                results[planet] = parseFloat((earthGravityFactors[planet] * factorValue).toFixed(2));
+            }
+        } else if (factorPlanets === "alien") {
+            for (let planet in alienGravityFactors) {
+                results[planet] = parseFloat((alienGravityFactors[planet] * factorValue).toFixed(2));
+            }
+        }
         break;
     }
     console.log(showUserFactors(factorType, factorPlanets, factorSystem, factorValue));
