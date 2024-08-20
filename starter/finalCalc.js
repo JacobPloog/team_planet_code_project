@@ -27,9 +27,23 @@ function showUserFactors(type, value) {
 
             while (true) {
     
-                let  weight= prompt (">>");
-   
+                if (factorType !== "pushups") {
+                    console.log("What measurement system 1 for metric 2 for imperial")
+                    factorSystem = prompt(">>");
+                }
+                    if(!isNaN(factorSystem)&& 4 > factorSystem > 0){
+                        switch (factorSystem) {
+                            case "1":
+                                factorSystem ="metric" ;
+                                break;
+                                case "2":
+                                    factorSystem ="imperial";
+                                    break;
+                        }
+
+                    }
                 break;
+
 
     }
 
